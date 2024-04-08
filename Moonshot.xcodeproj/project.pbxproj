@@ -19,6 +19,9 @@
 		803FC55A2BB5885C00B6FF52 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FC5592BB5885C00B6FF52 /* Bundle-Decodable.swift */; };
 		803FC55C2BB58AEA00B6FF52 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FC55B2BB58AEA00B6FF52 /* Mission.swift */; };
 		80F283E02BB82DFA000CC36D /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F283DF2BB82DFA000CC36D /* Color-Theme.swift */; };
+		80F94A6F2BC431E200AC555E /* ViewDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F94A6E2BC431E200AC555E /* ViewDivider.swift */; };
+		80F94A712BC4379700AC555E /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F94A702BC4379700AC555E /* GridLayout.swift */; };
+		80F94A732BC4387700AC555E /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F94A722BC4387700AC555E /* ListLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		803FC5592BB5885C00B6FF52 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		803FC55B2BB58AEA00B6FF52 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		80F283DF2BB82DFA000CC36D /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		80F94A6E2BC431E200AC555E /* ViewDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDivider.swift; sourceTree = "<group>"; };
+		80F94A702BC4379700AC555E /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		80F94A722BC4387700AC555E /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 				803FC5452BB5861000B6FF52 /* MoonshotApp.swift */,
 				803FC5472BB5861000B6FF52 /* ContentView.swift */,
 				800603C02BB842FF00627D8B /* MissionView.swift */,
+				80F94A702BC4379700AC555E /* GridLayout.swift */,
+				80F94A722BC4387700AC555E /* ListLayout.swift */,
+				80F94A6E2BC431E200AC555E /* ViewDivider.swift */,
 				800603C22BB9938000627D8B /* AstronautView.swift */,
 				80F283DF2BB82DFA000CC36D /* Color-Theme.swift */,
 				803FC5572BB5877A00B6FF52 /* Astronaut.swift */,
@@ -169,6 +178,9 @@
 				80F283E02BB82DFA000CC36D /* Color-Theme.swift in Sources */,
 				803FC5582BB5877A00B6FF52 /* Astronaut.swift in Sources */,
 				803FC5462BB5861000B6FF52 /* MoonshotApp.swift in Sources */,
+				80F94A6F2BC431E200AC555E /* ViewDivider.swift in Sources */,
+				80F94A712BC4379700AC555E /* GridLayout.swift in Sources */,
+				80F94A732BC4387700AC555E /* ListLayout.swift in Sources */,
 				803FC55C2BB58AEA00B6FF52 /* Mission.swift in Sources */,
 				803FC55A2BB5885C00B6FF52 /* Bundle-Decodable.swift in Sources */,
 			);

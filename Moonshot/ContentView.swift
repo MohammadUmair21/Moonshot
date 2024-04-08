@@ -13,56 +13,38 @@ struct ContentView: View {
     
     let missions : [Mission] = Bundle.main.decode("missions.json")
     
-    let columns = [
-        GridItem(.adaptive(minimum: 150))
-    ]
-
+    @AppStorage("showingGrid") private var showingGrid = true
     
     var body: some View {
         NavigationStack{
-            ScrollView{
-                LazyVGrid(columns: columns){
-                    ForEach(missions) { mission in
-                        NavigationLink{
-                            MissionView(mission: mission, astronauts: astronauts)
-                        } label: {
-                            VStack{
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-                                
-                                VStack{
-                                    Text(mission.displayName)
-                                        .font(.headline)
-                                        .foregroundStyle(.white)
-                                    
-                                    Text(mission.formattedLaunchDate)
-                                        .font(.caption)
-                                        .foregroundStyle(.gray)
-                                }
-                                .padding()
-                                .frame(maxWidth : .infinity)
-                                .background(.lightBackground)
+            Group {
+                if showingGrid {
+                    GridLayout(missions: missions, astronauts: astronauts)
+                } else {
+                    ListLayout(missions: missions, astronauts: astronauts)
                             }
-                            .clipShape(.rect(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            )
                         }
+                        .toolbar {
+                            Button {
+                                showingGrid.toggle()
+                            } label: {
+                                if showingGrid {
+                                    Label("Show as table", systemImage: "list.dash")
+                                } else {
+                                    Label("Show as grid", systemImage: "square.grid.2x2")
+                                }
+                            }
+                        }
+                        
+                        .navigationTitle("Moonshot")
+                        .background(.darlBackground)
+                        .preferredColorScheme(.dark)
                     }
                 }
-                .padding([.horizontal,.bottom])
             }
-            .navigationTitle("Moonshot")
-            .background(.darlBackground)
-            .preferredColorScheme(.dark)
-        }
-    }
-}
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
